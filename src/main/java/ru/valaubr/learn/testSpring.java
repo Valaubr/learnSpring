@@ -12,12 +12,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author valaubr
  */
 public class testSpring {
+
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        
-        Music music = context.getBean("musicBean", Music.class);
-        
-        MusicPlayer mp = new MusicPlayer(music);
+
+//        Music music = context.getBean("musicBean", Music.class);
+        MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
         mp.playMusic();
+        context.close();
     }
 }

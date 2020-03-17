@@ -8,7 +8,11 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="musicBean"
-        class="ru.valaubr.learn.JazzMusic">
+          class="ru.valaubr.learn.RockSong">
     </bean>
 
+    <bean id="musicPlayer" 
+          class="ru.valaubr.learn.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
 </beans>
