@@ -14,7 +14,8 @@
     </bean>
 
     <bean id="musicPlayer" 
-          class="ru.valaubr.learn.MusicPlayer">
+          class="ru.valaubr.learn.MusicPlayer"
+          scope="prototype">
         <property name="music" ref="musicBean"/>
         
         <property name="name" value="${musicPlayer.name}"/>
