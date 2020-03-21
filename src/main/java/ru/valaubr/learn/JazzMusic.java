@@ -5,10 +5,13 @@
  */
 package ru.valaubr.learn;
 
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author valaubr
  */
+@Component
 public class JazzMusic implements Music{
 
     @Override

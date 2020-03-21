@@ -6,11 +6,13 @@
 package ru.valaubr.learn;
 
 import java.util.Date;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author valaubr
  */
+@Component
 public class RockSong implements Music{
     
     private RockSong(){}

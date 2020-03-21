@@ -16,16 +16,12 @@ public class testSpring {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Music rockMusic = context.getBean("musicBean", RockSong.class);
-        System.out.println(rockMusic.getSong());
+        Music rockMusic = context.getBean("rockSong", Music.class);
+        Music classicalMusic = context.getBean("classicalMusic", Music.class);
+        MusicPlayer mpRock = new MusicPlayer(rockMusic);
+        MusicPlayer mpClassical = new MusicPlayer(classicalMusic);
+        mpRock.playMusic();
+        mpClassical.playMusic();
         context.close();
-/*        Music music = context.getBean("musicBean", Music.class);
-        MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
-        MusicPlayer mp2 = context.getBean("musicPlayer", MusicPlayer.class);
-        mp.playMusic();
-        
-        System.out.println(mp == mp2);
-        //System.out.println(mp.getVolume());
-        context.close();*/
     }
 }
