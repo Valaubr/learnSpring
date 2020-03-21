@@ -16,12 +16,8 @@ public class testSpring {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Music rockMusic = context.getBean("rockSong", Music.class);
-        Music classicalMusic = context.getBean("classicalMusic", Music.class);
-        MusicPlayer mpRock = new MusicPlayer(rockMusic);
-        MusicPlayer mpClassical = new MusicPlayer(classicalMusic);
-        mpRock.playMusic();
-        mpClassical.playMusic();
+        Computer computer = context.getBean("computer", Computer.class);
+        System.out.println(computer.toString());
         context.close();
     }
 }

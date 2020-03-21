@@ -5,7 +5,6 @@
  */
 package ru.valaubr.learn;
 
-import java.util.Date;
 import org.springframework.stereotype.Component;
 
 /**
@@ -16,19 +15,6 @@ import org.springframework.stereotype.Component;
 public class RockSong implements Music{
     
     private RockSong(){}
-    
-    public static RockSong getRockSong(){
-        return new RockSong();
-    }
-    
-    public void initMethod(){
-        System.out.println("You have a good taste");
-    }
-    
-    public void destroyMethod(){
-        Date date = new Date();
-        System.out.println("i`m die at: " + date.toString());
-    }
         
     @Override
     public String getSong() {
