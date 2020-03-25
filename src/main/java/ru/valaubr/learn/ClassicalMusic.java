@@ -13,10 +13,11 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class ClassicalMusic implements Music{
-
+    
+    String[] listOfMusic = {"","",""};
     @Override
-    public String getSong() {
-       return "First Symphony";
+    public String[] getSong() {
+       return listOfMusic;
     }
     
 }

@@ -9,6 +9,6 @@ package ru.valaubr.learn;
  *
  * @author valaubr
  */
-public interface Music {
-    String[] getSong();
+public enum TypeOfMusic {
+    ROCK_SONG, JAZZ_SONG;
 }

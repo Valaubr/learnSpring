@@ -13,12 +13,13 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class RockSong implements Music{
-    
-    private RockSong(){}
         
+    String[] listOfMusic = {"Starset - My Demons",
+        "Imagine Dragons - Radioactive",
+        "10 Years - Waking Up The Ghost"};
     @Override
-    public String getSong() {
-        return "Starset - Perfect Machine";
+    public String[] getSong() {
+        return listOfMusic;
     }
     
 }

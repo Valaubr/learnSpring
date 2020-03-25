@@ -21,9 +21,9 @@ public class Computer {
         this.id = 1;
         this.musicPlayer = musicPlayer;
     }
-
+   
     @Override
     public String toString() {
-        return "Computer{" + "id=" + id + ", musicPlayer=" + musicPlayer.playMusic() + '}';
+        return "Computer{" + "id=" + id + ", musicPlayer=" + musicPlayer.playMusic(TypeOfMusic.ROCK_SONG) + '}';
     }
 }

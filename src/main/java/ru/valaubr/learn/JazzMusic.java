@@ -14,9 +14,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class JazzMusic implements Music{
 
+    String[] listOfMusic = {"Ray Charl`z - Hit The Road Jack_V1",
+        "Ray Charl`z - Hit The Road Jack_V2",
+        "Ray Charl`z - Hit The Road Jack_V3"};
     @Override
-    public String getSong() {
-        return "I Feel Pretty - Dave Brubeck";
+    public String[] getSong(){
+        return listOfMusic;
     }
     
 }
