@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <header th:insert="blocks/header"></header>
+        <div class="jumbotron">
+            <h1 style="text-align: center;" th:text="title"></h1>
+        </div>
+        <div class="container">
+            <div th:each="el : ${post}" class="alert alert-info mt-2">
+                <p th:text="${el.author}"></p>
+                <p th:text="${el.full_text}"></p>
+                <p th:text="${el.views}"></p>
+                <a class="btn btn-primary" th:href="'/blog/'+${el.id}+'/edit'">edit</a>
+                <form method="POST" th:action="'/blog/' + ${el.id} + '/remove'">
+                    <button class="btn btn-secondary" type="submit">delete</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
